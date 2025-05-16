@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
+import Layout from './components/Layout';
+import Dashboard from './pages/Dashboard';
+import Usuarios from './pages/Usuarios';
+import EquipoOTS from './pages/EquipoOTS';
+import Alianzas from './pages/Alianzas';
+import Login from './pages/Login';
+import ProtectedRoute from './components/ProtectedRoute';
 
-function App() {
+export default function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
+        
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute isAuthenticated={isAuthenticated}>
+              <Layout setIsAuthenticated={setIsAuthenticated} />
+            </ProtectedRoute>
+          }
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Route index element={<Dashboard />} />
+          <Route path="usuarios" element={<Usuarios />} />
+          <Route path="equipo-ots" element={<EquipoOTS />} />
+          <Route path="alianzas" element={<Alianzas />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
-
-export default App;
