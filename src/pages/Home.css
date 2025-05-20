@@ -1,0 +1,57 @@
+.main-header {
+  background: #002855;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.main-header a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.carousel-slide {
+  width: 100%;
+  position: relative;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.caption {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+}
+
+.noticias, .indicadores {
+  padding: 2rem;
+  background: #f5f5f5;
+}
+
+.news-grid {
+  display: flex;
+  gap: 1rem;
+}
+
+.news-item {
+  background: white;
+  padding: 1rem;
+  flex: 1;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}

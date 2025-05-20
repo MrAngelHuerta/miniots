@@ -68,6 +68,8 @@ body, html, ul {
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
 }
 
 .sidebar a:hover {
@@ -90,8 +92,8 @@ h1 {
 p {
   color: #555;
 }
+
 .icon {
   margin-right: 8px;
-  vertical-align: middle;
   font-size: 1.2rem;
 }

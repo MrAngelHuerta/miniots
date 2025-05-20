@@ -12,7 +12,7 @@ export default function Login({ setIsAuthenticated }) {
     // Simulación de login exitoso (valida como gustes)
     if (user === 'admin@ots.com' && pass === '1234') {
       setIsAuthenticated(true);
-      navigate('/');
+      navigate('/panel');
     } else {
       alert('Credenciales inválidas');
     }

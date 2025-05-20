@@ -23,22 +23,16 @@ export default function Layout({ setIsAuthenticated }) {
           <nav>
             <ul>
               <li>
-                <Link to="/">
+                <Link to="/panel">
                   <AiOutlineHome className="icon" /> Inicio
                 </Link>
-              </li>
-              <li>
-                <Link to="/usuarios">
+                <Link to="/panel/usuarios">
                   <AiOutlineUser className="icon" /> Usuarios
                 </Link>
-              </li>
-              <li>
-                <Link to="/equipo-ots">
+                <Link to="/panel/equipo-ots">
                   <AiOutlineTeam className="icon" /> Equipo OTS
                 </Link>
-              </li>
-              <li>
-                <Link to="/alianzas">
+                <Link to="/panel/alianzas">
                   <FaHandshake className="icon" /> Alianzas
                 </Link>
               </li>
