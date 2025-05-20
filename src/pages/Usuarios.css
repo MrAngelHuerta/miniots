@@ -1,0 +1,54 @@
+.usuarios-wrapper {
+  padding: 20px;
+}
+
+.usuarios-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nuevo-btn {
+  background-color: green;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.busqueda {
+  width: 100%;
+  padding: 8px;
+  margin: 15px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.tabla-usuarios {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-usuarios th,
+.tabla-usuarios td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+.btn.editar {
+  color: #007bff;
+}
+
+.btn.eliminar {
+  color: #dc3545;
+}

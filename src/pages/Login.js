@@ -10,7 +10,7 @@ export default function Login({ setIsAuthenticated }) {
   const handleLogin = (e) => {
     e.preventDefault();
     // Simulación de login exitoso (valida como gustes)
-    if (user === 'admin' && pass === '1234') {
+    if (user === 'admin@ots.com' && pass === '1234') {
       setIsAuthenticated(true);
       navigate('/');
     } else {
