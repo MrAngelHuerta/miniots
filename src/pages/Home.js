@@ -13,11 +13,16 @@ const Home = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    alert('Buscando: ${searchTerm}');
+    alert(`Buscando: ${searchTerm}`);
   };
 
   return (
     <div className="container mt-4">
+      {/* Login Button in the top right */}
+      <div className="top-login">
+        <Link to="/login" className="btn btn-primary">MI OT's</Link>
+      </div>
+
       {/* Buscador */}
       <form className="mb-4" onSubmit={handleSearch}>
         <div className="input-group">
@@ -33,7 +38,7 @@ const Home = () => {
       </form>
 
       {/* Carrusel */}
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center"> 
         <div id="homeCarousel" className="carousel slide mb-5 w-75 custom-carousel" data-bs-ride="carousel">
           <div className="carousel-inner">
             <div className="carousel-item active">
@@ -60,25 +65,21 @@ const Home = () => {
       {/* Noticias */}
       <section>
         <h2>Noticias</h2>
-        <div className="row">
-          <div className="col-md-4 mb-3">
-            <img src={noticia1} alt="Noticia 1" className="img-fluid rounded" />
+        <div className="news-grid">
+          <div className="news-item">
+            <img src={noticia1} alt="Noticia 1" />
             <p>Nuevos modelos de negocio en el entorno digital.</p>
           </div>
-          <div className="col-md-4 mb-3">
-            <img src={noticia2} alt="Noticia 2" className="img-fluid rounded" />
+          <div className="news-item">
+            <img src={noticia2} alt="Noticia 2" />
             <p>Gestión estratégica de empresas en crecimiento.</p>
           </div>
-          <div className="col-md-4 mb-3">
-            <img src={noticia3} alt="Noticia 3" className="img-fluid rounded" />
+          <div className="news-item">
+            <img src={noticia3} alt="Noticia 3" />
             <p>Procesos empresariales para mejorar la eficiencia.</p>
           </div>
         </div>
       </section>
-
-      <div className="mt-4 text-center">
-        <Link to="/login" className="btn btn-primary">Ir al login</Link>
-      </div>
     </div>
   );
 };

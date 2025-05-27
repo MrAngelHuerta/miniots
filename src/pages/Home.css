@@ -24,10 +24,20 @@
   position: relative;
 }
 
-.carousel-slide img {
+.news-item img {
   width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
+  display: block;
 }
+
+.carousel-item img {
+  width: 100%;
+  height: 500px; /* Puedes ajustar según tu diseño */
+  object-fit: cover;
+  display: block;
+}
+
 
 .caption {
   position: absolute;
@@ -47,11 +57,40 @@
 .news-grid {
   display: flex;
   gap: 1rem;
+  flex-wrap: nowrap; /* evita que bajen */
+  justify-content: space-between;
 }
 
 .news-item {
+  flex: 1;
   background: white;
   padding: 1rem;
-  flex: 1;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.news-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.top-login {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #e0eafc, #cfdef3); 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
