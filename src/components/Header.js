@@ -3,7 +3,6 @@ import React from 'react';
 export default function Header() {
   const handleLogout = () => {
     alert("Sesión cerrada");
-    // Aquí podrías redirigir o limpiar datos de sesión
   };
 
   return (

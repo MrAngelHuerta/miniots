@@ -40,13 +40,11 @@ body, html, ul {
   background-color: #10239e;
 }
 
-/* BODY LAYOUT */
 .app-body {
   display: flex;
   flex: 1;
 }
 
-/* SIDEBAR */
 .sidebar {
   width: 220px;
   background-color: #1e1e2f;
@@ -76,7 +74,6 @@ body, html, ul {
   color: #ffffff;
 }
 
-/* MAIN CONTENT */
 .main-content {
   flex-grow: 1;
   padding: 30px;

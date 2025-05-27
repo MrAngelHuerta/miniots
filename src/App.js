@@ -15,13 +15,10 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        {/* Página de bienvenida pública */}
         <Route path="/" element={<Home />} />
 
-        {/* Login */}
         <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
 
-        {/* Rutas protegidas bajo /panel */}
         <Route
           path="/panel"
           element={

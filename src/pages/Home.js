@@ -18,7 +18,6 @@ const Home = () => {
 
   return (
     <div className="container mt-4">
-      {/* Login Button in the top right */}
       <div className="top-login">
         <Link to="/login" className="btn btn-primary">MI OT's</Link>
       </div>

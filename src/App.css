@@ -1,9 +1,9 @@
 .app-header {
-  background-color: #2f54eb; /* azul fuerte */
+  background-color: #2f54eb; 
   color: white;
   padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between; /* Asegura que "Cerrar sesión" quede a la derecha */
+  justify-content: space-between; 
   align-items: center;
   font-size: 1rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);

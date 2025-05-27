@@ -16,7 +16,6 @@ export default function Layout({ setIsAuthenticated }) {
           Cerrar sesión
         </div>
       </header>
-      {/* ... resto igual */}
 
       <div className="app-body">
         <aside className="sidebar">
