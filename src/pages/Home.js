@@ -24,9 +24,9 @@ const Home = () => {
           <span className="brand">Miots</span>
         </div>
         <div className="nav-links">
-          <Link to="/ruta1">OTS</Link>
-          <Link to="/ruta2">Colabora con nosotros</Link>
-          <Link to="/ruta3">Contactanos</Link>
+          <Link to="/ots">OTS</Link>
+          <Link to="/Colabora">Colabora con nosotros</Link>
+          <Link to="/Contactanos">Contactanos</Link>
           <Link to="/login" className="login-btn">Iniciar Sesión</Link>
         </div>
       </nav>

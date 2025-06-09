@@ -1,0 +1,120 @@
+
+.colabora-container {
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+  color: #111;
+  background-color: #fff;
+}
+
+
+.colabora-banner {
+  background-color: #0a1f44;
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.colabora-banner h1 {
+  font-size: 2.5rem; 
+  font-weight: bold;
+}
+
+
+.colabora-intro h2 {
+  font-size: 2rem; 
+  font-weight: 600;
+  color: #0a1f44;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+
+.colabora-porque {
+  background-color: #0a1f44;
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  width: 70%;
+  min-width: 320px;
+  max-width: 700px;
+  text-align: left;
+}
+
+.colabora-porque h3 {
+  font-size: 1.8rem; 
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.colabora-porque p {
+  margin-top: 1rem;
+  line-height: 1.8; 
+  font-size: 1.1rem; 
+}
+
+.colabora-beneficios {
+  margin-top: 2rem;
+}
+
+.colabora-beneficios h2 {
+  text-align: center;
+  font-size: 2rem; 
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #0a1f44;
+}
+
+
+.colabora-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.colabora-card {
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  flex: 1 1 200px;
+  max-width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.colabora-card:hover {
+  transform: translateY(-5px);
+}
+
+.colabora-card svg {
+  margin-bottom: 0.5rem; 
+}
+
+.colabora-card h4 {
+  margin-top: 1rem;
+  font-size: 1.4rem; 
+  font-weight: 600;
+  color: #002f5f;
+}
+
+.colabora-card p {
+  font-size: 1.05rem; 
+  color: #1a1a1a; 
+  margin-top: 0.5rem;
+}
+
+
+@media (max-width: 768px) {
+  .colabora-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .colabora-card {
+    max-width: 90%;
+  }
+}
