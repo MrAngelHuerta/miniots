@@ -8,6 +8,11 @@ import EquipoOTS from './pages/EquipoOTS';
 import Alianzas from './pages/Alianzas';
 import Login from './pages/Login';
 import Home from './pages/Home';
+import Noticia1 from './pages/Noticia1';
+import Noticia2 from './pages/Noticia2';
+import Noticia3 from './pages/Noticia3';
+import Noticias from './pages/Noticias';
+
 
 import OTS from './pages/OTS';
 import Colabora from './pages/Colabora';
@@ -27,6 +32,12 @@ export default function App() {
         <Route path="/ots" element={<OTS />} />
         <Route path="/colabora" element={<Colabora />} />
         <Route path="/contactanos" element={<Contactanos />} />
+        <Route path="/noticia1" element={<Noticia1 />} />
+        <Route path="/noticia2" element={<Noticia2 />} />
+        <Route path="/noticia3" element={<Noticia3 />} />
+        <Route path="/noticias" element={<Noticias />} />
+
+
 
         {/* Rutas protegidas */}
         <Route

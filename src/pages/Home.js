@@ -28,6 +28,8 @@ const Home = () => {
           <Link to="/Colabora">Colabora con nosotros</Link>
           <Link to="/Contactanos">Contactanos</Link>
           <Link to="/login" className="login-btn">Iniciar Sesión</Link>
+          <Link to="/noticias">Noticias</Link>
+
         </div>
       </nav>
 
@@ -76,19 +78,26 @@ const Home = () => {
           <h2>Noticias</h2>
           <div className="news-grid">
             <div className="news-item">
-              <img src={noticia1} alt="Noticia 1" />
-              <p>Nuevos modelos de negocio en el entorno digital.</p>
+              <Link to="/noticia1" target="_blank">
+                <img src={noticia1} alt="Noticia 1" />
+                <p>Nuevos modelos de negocio en el entorno digital.</p>
+              </Link>
             </div>
             <div className="news-item">
-              <img src={noticia2} alt="Noticia 2" />
-              <p>Gestión estratégica de empresas en crecimiento.</p>
+              <Link to="/noticia2" target="_blank">
+                <img src={noticia2} alt="Noticia 2" />
+                <p>Gestión estratégica de empresas en crecimiento.</p>
+              </Link>
             </div>
             <div className="news-item">
-              <img src={noticia3} alt="Noticia 3" />
-              <p>Procesos empresariales para mejorar la eficiencia.</p>
+              <Link to="/noticia3" target="_blank">
+                <img src={noticia3} alt="Noticia 3" />
+                <p>Procesos empresariales para mejorar la eficiencia.</p>
+              </Link>
             </div>
           </div>
         </section>
+
       </div>
 
       {/* Footer */}

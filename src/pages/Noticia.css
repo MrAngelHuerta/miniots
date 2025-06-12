@@ -1,0 +1,35 @@
+.noticia-container {
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fff;
+  color: #111;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.noticia-banner {
+  background-color: #0a1f44;
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.noticia-banner h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.noticia-content {
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.noticia-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}

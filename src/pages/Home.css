@@ -105,7 +105,7 @@ body {
 
 /* Footer */
 .footer {
-  background-color: #001f3f; /* Azul oscuro */
+  background-color: #001f3f; 
   color: white;
   padding: 3rem 2rem;
   text-align: center;
@@ -119,8 +119,8 @@ body {
 }
 
 .footer-content p {
+  color: white !important;
   margin: 0.3rem 0;
-  font-size: 1rem;
 }
 
 .social-links {
@@ -137,4 +137,28 @@ body {
 
 .social-links a:hover {
   color: #66b2ff;
+}
+
+.input-group > .form-control,
+.input-group > .btn {
+  height: 42px;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-sizing: border-box; 
+}
+
+.input-group > .btn {
+  margin-top: 0; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-content-wrapper {
+  background-color: #f0f4fa; /* Puedes cambiar este color a tu preferencia */
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
