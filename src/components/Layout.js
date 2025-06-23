@@ -43,10 +43,8 @@ export default function Layout({ setIsAuthenticated }) {
                 </Link>
               </li>
 
-              {/* Nuevas rutas fuera de /panel */}
               <li>
                 <Link to="/ots">
-                  {/* Puedes poner un icono si quieres, sino solo texto */}
                   Ruta 1
                 </Link>
               </li>

@@ -1,44 +1,49 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
-export default function Login({ setIsAuthenticated }) {
-  const [username, setCorreo] = useState('');
+export default function Login({ isAuthenticated, setIsAuthenticated }) {
+  const [email, setEmail] = useState('');
   const [password, setPass] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Si ya estás autenticado, redirige al panel
+    if (isAuthenticated) {
+      navigate('/panel');
+    }
+  }, [isAuthenticated, navigate]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
-    console.log('Intentando iniciar sesión con:', { username, password });
+    setLoading(true);
+    setErrorMsg('');
 
     try {
-      const res = await fetch('http://localhost:8000/api/api/token/', {
+      const res = await fetch('http://localhost:8000/auth/login/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ username: email, password }), // Envío email como username para backend
       });
 
-      console.log('Respuesta del servidor:', res);
-
       if (!res.ok) {
-        const errorText = await res.text(); // Esto te puede dar más pistas
-        console.error('Error en la respuesta:', errorText);
-        throw new Error('Credenciales inválidas');
+        const errorText = await res.text();
+        throw new Error(errorText || 'Credenciales inválidas');
       }
 
       const data = await res.json();
-      console.log('Datos recibidos:', data);
 
-      // Guarda el token (por ejemplo en localStorage)
       localStorage.setItem('accessToken', data.access);
       localStorage.setItem('refreshToken', data.refresh);
 
       setIsAuthenticated(true);
       navigate('/panel');
     } catch (error) {
-      console.error('Error al iniciar sesión:', error);
-      alert(error.message);
+      setErrorMsg(error.message || 'Error al iniciar sesión');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -46,12 +51,17 @@ export default function Login({ setIsAuthenticated }) {
     <div className="login-container">
       <form className="login-form" onSubmit={handleLogin}>
         <h2>Iniciar sesión</h2>
+
+        {errorMsg && <div className="error-message">{errorMsg}</div>}
+
         <input
           type="email"
           placeholder="Correo"
-          value={username}
-          onChange={(e) => setCorreo(e.target.value)}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           required
+          autoComplete="username"
+          disabled={loading}
         />
         <input
           type="password"
@@ -59,8 +69,13 @@ export default function Login({ setIsAuthenticated }) {
           value={password}
           onChange={(e) => setPass(e.target.value)}
           required
+          autoComplete="current-password"
+          disabled={loading}
         />
-        <button type="submit">Entrar</button>
+
+        <button type="submit" disabled={loading}>
+          {loading ? 'Ingresando...' : 'Entrar'}
+        </button>
       </form>
     </div>
   );
